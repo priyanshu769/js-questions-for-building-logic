@@ -182,3 +182,41 @@ const table = (a) => {
 };
 // table(2);
 // This was easy, hardly took 1 minute.
+
+// Question4: Write a program to return a Fibonacci series : 0,1,1,2,3,5,8,13,21...
+
+// const fibonacci = (a = 0, b = 1) => {
+//   if (a === 0 && b === 0) {
+//     return console.log("Can't return a Fibonacci series.");
+//   } else console.log("calculating...");
+//   // trying to figure out
+// };
+// // fibonacci(0, 1);
+
+// Question5: Write a program to take an input from a user and find its Factorial.
+
+// const factorial = (a) => {
+//   for (let i = 0; i < a; i++) {
+//     let x = a;
+//     function multiply() {
+
+//     }
+//     multiply();
+//   }
+// };
+
+// Question6:Write a Program to take a number input from user and find if the number is Prime or not.
+
+const checkPrime = (a) => {
+  if (a === 1) {
+    console.log(`${a} is a composite number.`);
+  } else if (a === 2 || a === 3) {
+    console.log(`${a} is a prime number.`);
+  } else if (a % a === 0 && a % 1 === 0 && (a % 2 === 0 || a % 3 === 0)) {
+    console.log(`${a} is not a prime number.`);
+  } else if (a % a === 0 && a % 1 === 0 && (a % 2 != 0 || a % 3 != o)) {
+    console.log(`${a} is a prime number.`);
+  }
+};
+// checkPrime(999983);
+// I came up with this solution. As of now it has worked fine. But now I think I need to google for other solutions, what if there is a better way.
