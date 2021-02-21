@@ -236,8 +236,8 @@ const weekendOrNor = (a) => {
     console.log(`${a} is a weekend.`);
   } else console.log(`${a} is not a day name.`);
 };
-weekendOrNor("Tuesday");
-weekendOrNor("Saturday");
+// weekendOrNor("Tuesday");
+// weekendOrNor("Saturday");
 
 const weekendOrNor2 = (a) => {
   const weekday = ["monday", "tuesday", "wednesday", "thursday", "friday"];
@@ -247,5 +247,5 @@ const weekendOrNor2 = (a) => {
   } else if (weekend.includes(a)) console.log(`${a} is a weekend.`);
   else console.log(`${a} is not a day name.`);
 };
-weekendOrNor2("tuesday");
-weekendOrNor2("saturday");
+// weekendOrNor2("tuesday");
+// weekendOrNor2("saturday");
