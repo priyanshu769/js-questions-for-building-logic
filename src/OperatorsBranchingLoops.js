@@ -173,3 +173,12 @@ const printStar = () => {
 // printStar();
 // I was stuck in this for like 10 minutes and then...
 // I din't knew about repeat, then I googled how to do this question and got to know about repeat.
+// Question3: Write a program to take a number input from user and print multiplication table 12 times for that number.
+
+const table = (a) => {
+  for (let i = 1; i <= 12; i++) {
+    console.log(a * i);
+  }
+};
+// table(2);
+// This was easy, hardly took 1 minute.
