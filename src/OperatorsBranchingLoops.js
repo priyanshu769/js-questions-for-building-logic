@@ -220,3 +220,32 @@ const checkPrime = (a) => {
 };
 // checkPrime(999983);
 // I came up with this solution. As of now it has worked fine. But now I think I need to google for other solutions, what if there is a better way.
+
+// Question7: Write a program to take a day as an input and determine whether it is a weekday or weekend.
+
+const weekendOrNor = (a) => {
+  if (
+    a === "Monday" ||
+    a === "Tuesday" ||
+    a === "Wednesday" ||
+    a === "Thursday" ||
+    a === "Friday"
+  ) {
+    console.log(`${a} is a weekday.`);
+  } else if (a === "Saturday" || a === "Sunday") {
+    console.log(`${a} is a weekend.`);
+  } else console.log(`${a} is not a day name.`);
+};
+weekendOrNor("Tuesday");
+weekendOrNor("Saturday");
+
+const weekendOrNor2 = (a) => {
+  const weekday = ["monday", "tuesday", "wednesday", "thursday", "friday"];
+  const weekend = ["saturday", "sunday"];
+  if (weekday.includes(a)) {
+    console.log(`${a} is a weekday.`);
+  } else if (weekend.includes(a)) console.log(`${a} is a weekend.`);
+  else console.log(`${a} is not a day name.`);
+};
+weekendOrNor2("tuesday");
+weekendOrNor2("saturday");
