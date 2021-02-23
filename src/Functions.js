@@ -23,3 +23,10 @@ const numberOfWords = (a) => {
   console.log(b.length);
 };
 // numberOfWords("We are neogrammers.");
+
+// Question4: Given n numbers, your function should return the minimum of them all. The number of parameters won't be accepted from user.
+
+const minNum = (...array) => console.log(Math.min(...array));
+// minNum(9,8,3,6,3,7,5);
+
+// Question5:

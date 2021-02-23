@@ -92,7 +92,7 @@ const findMinInThree = (a, b, c) => {
 // ];
 // I tried it doing like this but it wasn't taking, I don't get what's wrong.
 
-const monthDays = [31, 28, 31, 30, 31, 30, 30, 31, 30, 31, 30, 31];
+const monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 const [
   January,
   February,
