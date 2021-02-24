@@ -50,6 +50,6 @@ const userID = (id) => `${id} will be logged in.`;
 
 const logBoth = (a, b) => console.log(a, b);
 
-console.log(username("Priyanshu"));
-console.log(userID("77776"));
-logBoth(username("Priyanshu"), userID("77776"));
+// console.log(username("Priyanshu"));
+// console.log(userID("77776"));
+// logBoth(username("Priyanshu"), userID("77776"));
