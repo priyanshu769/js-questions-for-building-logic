@@ -71,7 +71,7 @@ const oddEvenSum = (array) => {
   return array.reduce(
     (a, b) => {
       if (b % 2) {
-        return { ...a, evenSum: a.evenSum - b };
+        return { ...a, evenSum: a.evenSum + b };
       } else return { ...a, oddSum: a.oddSum + b };
     },
     { oddSum: 0, evenSum: 0 } //This is our second argument which is a in parameters and b comes from the array[i].
@@ -92,15 +92,20 @@ const fruits = [
 ];
 
 // (a) Find the number of strings with similar number of characters.
-const stringCharacters = (array) => {
-  return array.map((string) => string.length);
-};
-// console.log(stringCharacters(fruits));
 
-const stringCharactersObj = (array) => {
-  return array.map((string) => ({ [string]: string.length }));
+// const stringLength = (array) => {
+//   return array.map((string) => string.length);
+// };
+// console.log(stringLength(fruits));
+
+const lengthCount = (array) => {
+  return array.reduce((obj, string) => {
+    if ([string.length] in obj) {
+      return { ...obj, [string.length]: obj[string.length] + 1 };
+    } else return { ...obj, [string.length]: 1 };
+  }, {});
 };
-// console.log(stringCharactersObj(fruits));
+// console.log(lengthCount(fruits));
 
 // (b) return an array with strings which have vowel
 
@@ -110,5 +115,11 @@ const vowelStrings = (array) => {
     vowels.some((vowel) => string.includes(vowel))
   );
 };
+// console.log(vowelStrings(fruits));
 
-console.log(vowelStrings(fruits));
+// (c) return an array of objects with key as item and value as number of characters in the string.
+
+const stringCharactersObj = (array) => {
+  return array.map((string) => ({ [string]: string.length }));
+};
+// console.log(stringCharactersObj(fruits));
