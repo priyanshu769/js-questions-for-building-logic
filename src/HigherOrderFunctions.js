@@ -80,7 +80,16 @@ const oddEvenSum = (array) => {
 // console.log(oddEvenSum(integers));
 
 // Question: Given an array of strings.
-const fruits = ["mango", "apple", "guava", "orange", "grapes", "berry"];
+const fruits = [
+  "mango",
+  "apple",
+  "guava",
+  "orange",
+  "grapes",
+  "berry",
+  "qwrt",
+  "lkjh"
+];
 
 // (a) Find the number of strings with similar number of characters.
 const stringCharacters = (array) => {
@@ -92,3 +101,14 @@ const stringCharactersObj = (array) => {
   return array.map((string) => ({ [string]: string.length }));
 };
 // console.log(stringCharactersObj(fruits));
+
+// (b) return an array with strings which have vowel
+
+const vowelStrings = (array) => {
+  const vowels = ["a", "e", "i", "o", "u"];
+  return array.filter((string) =>
+    vowels.some((vowel) => string.includes(vowel))
+  );
+};
+
+console.log(vowelStrings(fruits));
