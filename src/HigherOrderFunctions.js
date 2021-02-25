@@ -78,3 +78,17 @@ const oddEvenSum = (array) => {
   );
 };
 // console.log(oddEvenSum(integers));
+
+// Question: Given an array of strings.
+const fruits = ["mango", "apple", "guava", "orange", "grapes", "berry"];
+
+// (a) Find the number of strings with similar number of characters.
+const stringCharacters = (array) => {
+  return array.map((string) => string.length);
+};
+// console.log(stringCharacters(fruits));
+
+const stringCharactersObj = (array) => {
+  return array.map((string) => ({ [string]: string.length }));
+};
+// console.log(stringCharactersObj(fruits));
