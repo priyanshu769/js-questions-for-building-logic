@@ -1,21 +1,4 @@
 // Currying
-// {
-// function myName(a) {
-//   function says(b) {
-//     return console.log(a, b);
-//   }
-//   says("is saying hello!");
-// }
-
-// function num1(a) {
-//   const c = a * a * a;
-//   function num2(b) {
-//     return console.log(a + b);
-//   }
-//   num2(c);
-// }
-// // num1(8);
-// } These don't fall under currying.
 
 // Currying means a function which returns a function.
 function num3(a) {
@@ -27,8 +10,6 @@ function num3(a) {
 
 const call1 = num3(2);
 // console.log(call1(0));
-
-// You should search "How to call currying function?" and read about it.
 
 function num6(a) {
   const c = a * a * a;
@@ -44,7 +25,20 @@ const call2 = num6(2);
 const call3 = call2(3);
 // console.log(call3(4));
 
-// Composition
+// Currying question
+// create a function which takes your name and returns a function which would add your name to anything that function says.
+
+const name = (name) => {
+  return function nameSays(phrase) {
+    return phrase + name;
+  };
+};
+
+const nameSaid = name("Priyanshu");
+// console.log(nameSaid("I'm "));
+
+// Composition question
+// Write a function which can log any text with your username. Another function which can write any text with your userID. Now compose both functions to give one function which can log any text with both username + userID.
 const username = (username) => `${username} is trying to log in.`;
 const userID = (id) => `${id} will be logged in.`;
 
@@ -53,3 +47,15 @@ const logBoth = (a, b) => console.log(a, b);
 // console.log(username("Priyanshu"));
 // console.log(userID("77776"));
 // logBoth(username("Priyanshu"), userID("77776"));
+
+// The One question
+
+const compose = (...functions) => {
+  return (num) => functions.reduce((acc, curr) => curr(acc), num);
+};
+const increment = (num) => num + 1;
+const square = (num) => num * num;
+
+const incrementThenSq = compose(increment, square);
+
+console.log(incrementThenSq(3));
